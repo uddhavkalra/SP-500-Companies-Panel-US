@@ -15,7 +15,6 @@ sp_adds = ch_sp.T.reset_index().iloc[0:2, 2:].T #isolate additions
 sp_adds.columns = ['Date', 'ticker']
 sp_adds['Date'] = pd.to_datetime(sp_adds['Date'])
 sp_adds2 = sp_adds.dropna()
-sp_adds2
 sp_removed = ch_sp.T.reset_index().iloc[[0,3], 2:].T #isolate removals
 sp_removed.columns = ['Date', 'ticker']
 sp_removed['Date'] = pd.to_datetime(sp_removed['Date'])
